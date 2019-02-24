@@ -1,6 +1,6 @@
 ---
 
-- hosts: lemp
+- hosts: all
   remote_user: hakase
   become: yes
 
