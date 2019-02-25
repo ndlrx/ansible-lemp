@@ -8,15 +8,8 @@
 
 - name: Instal PHP-FPM
   apt:
-    name: '{{ item }}'
+    name: ['php','php-fpm','php-common','php-cli','php-curl']
     state: latest
-  
-  with_items:
-    - php
-    - php-fpm
-    - php-common
-    - php-cli
-    - php-curl
 
 - name: Configure php.ini
   blockinfile:
