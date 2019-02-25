@@ -3,14 +3,9 @@
 #
 - name: Install MySQL
   apt:
-    name: '{{ item }}'
+    name: ['mysql-server','mysql-client','python-mysqldb']
     state: latest
   notify: restart mysql
-
-  with_items:
-    - mysql-server
-    - mysql-client
-    - python-mysqldb
 
 - name: Create database
   mysql_db:
